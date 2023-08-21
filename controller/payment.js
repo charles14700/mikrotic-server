@@ -105,6 +105,7 @@ Regards, Charles.`;
       };
 
       try {
+        console.log("attemting to add user");
         const response = await axios.request(config);
         console.log(response.data);
       } catch (error) {
