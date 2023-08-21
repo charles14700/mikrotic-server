@@ -10,12 +10,11 @@ const api = axios.create({
 });
 
 const stkpush = async (req, res) => {
-  const userId = req.user.details._id;
   const { amount, phone_number } = req.body;
   const endpoint = "mpesa-stk-push/";
 
   try {
-    const response = await api.post(endpoint, {
+    await api.post(endpoint, {
       amount,
       phone_number,
     });
