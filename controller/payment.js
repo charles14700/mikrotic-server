@@ -19,7 +19,7 @@ const stkpush = async (req, res) => {
       phone_number,
     });
 
-    res.status(200).json({ response: response, success: true });
+    res.status(200).json(response.data);
   } catch (error) {
     res.status(500).json(error);
     console.log(error);
