@@ -14,12 +14,12 @@ const stkpush = async (req, res) => {
   const endpoint = "mpesa-stk-push/";
 
   try {
-    await api.post(endpoint, {
+    const response = await api.post(endpoint, {
       amount,
       phone_number,
     });
 
-    res.status(200).json("success");
+    res.status(200).json({ response: response, success: true });
   } catch (error) {
     res.status(500).json(error);
     console.log(error);
