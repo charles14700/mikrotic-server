@@ -96,7 +96,7 @@ Regards, Charles.`;
       let config = {
         method: "post",
         maxBodyLength: Infinity,
-        url: "http://charlesmikrotic.ddns.net/rest/ip/hotspot/user/add",
+        url: "http://20.41.7.5/rest/ip/hotspot/user/add",
         headers: {
           "Content-Type": "application/json",
           Authorization: "Basic YWRtaW46MDI2MTQ=",
