@@ -148,23 +148,23 @@ Regards, Charles.`;
       return `${month}${day}${hours}${minutes}${seconds}`;
     };
 
-    if (
-      failed_reason === "Request cancelled by user" ||
-      failed_reason ===
-        "Failed to initiate transaction. Ensure your phone is on and sim card updated. Dial *234*1*6# from your Safaricom sim card to update it and try again."
-    ) {
-      try {
-        await axios.post("https://sms.textsms.co.ke/api/services/sendsms/", {
-          apikey: "9d97e98deaa48d145fec88150ff28203",
-          partnerID: "7848",
-          message: `Apologies for the inconvenience faced during your attempt to purchase the ClassicsNetPro package. Kindly contact us @ 0740315545 for immediate assistance.`,
-          shortcode: "TextSMS",
-          mobile: account,
-        });
-      } catch (error) {
-        console.log("Error sending SMS:", error);
-      }
-    }
+    // if (
+    //   failed_reason === "Request cancelled by user" ||
+    //   failed_reason ===
+    //     "Failed to initiate transaction. Ensure your phone is on and sim card updated. Dial *234*1*6# from your Safaricom sim card to update it and try again."
+    // ) {
+    //   try {
+    //     await axios.post("https://sms.textsms.co.ke/api/services/sendsms/", {
+    //       apikey: "9d97e98deaa48d145fec88150ff28203",
+    //       partnerID: "7848",
+    //       message: `Apologies for the inconvenience faced during your attempt to purchase the ClassicsNetPro package. Kindly contact us @ 0740315545 for immediate assistance.`,
+    //       shortcode: "TextSMS",
+    //       mobile: account,
+    //     });
+    //   } catch (error) {
+    //     console.log("Error sending SMS:", error);
+    //   }
+    // }
 
     if (state === "COMPLETE") {
       console.log("state = complete");
