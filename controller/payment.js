@@ -238,7 +238,7 @@ Regards, Charles.`;
             devices,
             validity
           );
-          // await sendCode(name, speed, bandwidth, devices, validity);
+          await sendCode(name, speed, bandwidth, devices, validity);
         } catch (error) {
           console.log("Error adding user and sending code:", error);
         }
