@@ -17,6 +17,7 @@ const stkpush = async (req, res) => {
     const response = await api.post(endpoint, {
       amount,
       phone_number,
+      mobile_tarrif: "BUSINESS-PAYS",
     });
 
     res.status(200).json(response.data);
