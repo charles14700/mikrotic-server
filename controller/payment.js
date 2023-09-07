@@ -41,9 +41,9 @@ const webhookTrigger = async (req, res) => {
 Validity: ${validity}
 Bandwidth: ${bandwidth}
 Devices: ${devices}
+RecoveryMode:'Active'
 
-Enjoy & contact us for assistance.
-Regards, Charles.`;
+Enjoy & contact us for assistance.`;
 
       try {
         const data = JSON.stringify({
